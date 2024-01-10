@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { MantineProvider } from "@mantine/core";
 
 export const metadata: Metadata = {
   title: "Intercepting Routes Sample",
@@ -14,11 +13,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <MantineProvider defaultColorScheme={"light"}>
-        <body>
-          <div className={"p-5"}>{children}</div>
-        </body>
-      </MantineProvider>
+      <body>
+        <div className={"p-5"}>{children}</div>
+      </body>
     </html>
   );
 }
